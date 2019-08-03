@@ -17,7 +17,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "strictNullChecks": false,//usually if the value is null or o undefined, it gives an error to get rid of that syntax highlightning set to false :)
   },
   "include": [
     "src"
