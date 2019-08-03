@@ -1,6 +1,8 @@
 import React, {Component}  from "react";
+import Innerface from ".././interfaces/Detail"
 
-class Detail extends Component<{ name:string, quantity: number }>{//passing as props
+export default class Detail extends Component <Innerface> {//passing as props
+// class Detail extends Component<{ name:string, quantity: number }>{
     render(){
         const {name, quantity } = this.props
         return(
@@ -12,4 +14,4 @@ class Detail extends Component<{ name:string, quantity: number }>{//passing as p
     }
 }
 
-export default Detail;
+// export default Detail;
