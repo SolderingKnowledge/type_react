@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Detail from "./components/Detail";
 import './App.css';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-    </div>
-  );
+class App extends Component{
+  render(){
+    return(
+      <div>
+        <Detail name="me"  quantity={1}></Detail>
+      </div>
+    )
+  }
 }
 
 export default App;
