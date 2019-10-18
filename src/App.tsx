@@ -1,12 +1,28 @@
 import React, {Component} from 'react';
-import Detail from "./components/Detail";
+// import Detail from "./components/Detail";
 import './App.css';
 
-class App extends Component{
+class App extends Component <any, any> {
+  constructor(props:any){
+    super(props);
+    this.state = {
+      name: ""
+    }
+  }
+  change = (e:any)=>{
+    e.preventDefault()
+    this.setState({
+    [e.target.name] : e.target.value
+    })
+  }
   render(){
     return(
       <div>
-        <Detail name="me"  quantity={1}></Detail>
+        <form autoComplete="off">
+          <p>{this.state.name}</p>
+          <input name="name" type = "text"  onChange = {this.change} />
+          <input type= "submit" />
+        </form>
       </div>
     )
   }
